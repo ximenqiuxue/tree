@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yimi.ssm.mapper.TreeMapper">
+   <update id="updateByEntity">
+      UPDATE tree_test SET name =#{name} WHERE id =#{id}
+   </update>
+
+   <insert id="addByEntity" parameterType="Tree">
+      insert into tree_test (id, name ,pId) values (#{id},#{name},#{pId})
+   </insert>
+
+   <delete id="deleteByEntityId">
+      delete from tree_test where id=#{id}
+   </delete>
+</mapper>
